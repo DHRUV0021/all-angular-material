@@ -1,0 +1,70 @@
+<br><br><br><br>
+
+
+
+<!--  Template-driven form -->
+  <section>
+    <h4>Button Toggle inside of a Template-driven form</h4>
+    <mat-button-toggle-group [(ngModel)]="fontStyle" aria-label="Font Style">
+      <mat-button-toggle value="bold">Bold</mat-button-toggle>
+      <mat-button-toggle value="italic">Italic</mat-button-toggle>
+      <mat-button-toggle value="underline">Underline</mat-button-toggle>
+    </mat-button-toggle-group>
+    <p>Chosen value is {{fontStyle}}</p>
+  </section>
+  
+  <!-- Reactive form
+  <section>
+    <h4>Button Toggle inside of a Reactive form</h4>
+    <mat-button-toggle-group [formControl]="fontStyleControl" aria-label="Font Style">
+      <mat-button-toggle value="bold">Bold</mat-button-toggle>
+      <mat-button-toggle value="italic">Italic</mat-button-toggle>
+      <mat-button-toggle value="underline">Underline</mat-button-toggle>
+    </mat-button-toggle-group>
+    <p>Chosen value is {{fontStyleControl.value}}</p>
+  </section>
+   -->
+<br><br><br><br><br>
+
+
+<!-- =======================PARAGRAF TEXT RIGHT CENETR LEFT JUSTIFY STRT======================= -->
+   <mat-button-toggle-group #group="matButtonToggleGroup">
+    <mat-button-toggle value="left" aria-label="Text align left">
+      <mat-icon>format_align_left</mat-icon>
+    </mat-button-toggle>
+    <mat-button-toggle value="center" aria-label="Text align center">
+      <mat-icon>format_align_center</mat-icon>
+    </mat-button-toggle>
+    <mat-button-toggle value="right" aria-label="Text align right">
+      <mat-icon>format_align_right</mat-icon>
+    </mat-button-toggle>
+    <mat-button-toggle value="justify"  aria-label="Text align justify">
+      <mat-icon>format_align_justify</mat-icon>
+    </mat-button-toggle>
+  </mat-button-toggle-group>
+  <div class="example-selected-value">Selected value: {{group.value}}</div>
+
+{{group.value}}
+
+<p [style.text-align]="group.value">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi tempora distinctio dolorum sunt exercitationem, maxime enim voluptatum sequi quam neque placeat odit natus aspernatur dolorem earum repellat ea eum! Repellat necessitatibus pariatur iste deserunt labore facilis dolore at iusto rerum impedit ut dolorum sint, tempore provident, amet, itaque veniam cumque! Accusantium tempore veniam ex atque voluptatibus laudantium quibusdam architecto quas dolor suscipit corporis corrupti explicabo natus, velit, aut aliquam repellat! Quibusdam eveniet ipsa deleniti! Quibusdam, vel vitae, odit laudantium quis nobis esse quod, reiciendis dignissimos accusantium dolores. Minima qui adipisci molestias iure recusandae, at, aliquam, fuga quaerat eligendi neque sunt.</p>
+<br><br><br><br>
+<!-- =======================PARAGRAF TEXT RIGHT CENETR LEFT JUSTIFY STRT======================= -->
+
+
+<!-- =======================SINGAL SELECT & MULTIPLE SELECT STRAT======================= -->
+<h3>Single selection</h3>
+<mat-button-toggle-group name="favoriteColor"  #group2="matButtonToggleGroup" aria-label="Favorite Color">
+    <mat-button-toggle value="react">react</mat-button-toggle>
+    <mat-button-toggle value="angular">angular</mat-button-toggle>
+    <mat-button-toggle value="typescript">typescript</mat-button-toggle>
+</mat-button-toggle-group>
+<br>{{group2.value}}<br>
+
+<h3>Multiple selection</h3>
+<mat-button-toggle-group name="ingredients"  #group3="matButtonToggleGroup" aria-label="Ingredients" multiple>
+    <mat-button-toggle value="flour">Flour</mat-button-toggle>
+    <mat-button-toggle value="eggs">Eggs</mat-button-toggle>
+    <mat-button-toggle value="sugar">Sugar</mat-button-toggle>
+</mat-button-toggle-group>
+<br>{{group3.value}}<br>
+<!-- =======================SINGAL SELECT & MULTIPLE SELECT END======================= -->

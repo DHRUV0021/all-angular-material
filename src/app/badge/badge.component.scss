@@ -1,0 +1,48 @@
+
+
+
+
+:host {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .demo-section + .demo-section {
+    margin-top: 16px;
+  }
+  .mat-badge-content{
+      background-color: pink;
+      color:black;
+      border-radius: 5px;
+  }
+  
+  ::ng-deep .mat-badge-small.mat-badge-content{
+    font-size:3px;
+    padding:3-px;
+  }
+  ::ng-deep .mat-badge-large .mat-badge-content{
+    font-size: 10px;
+    padding:2px;
+  }
+
+  ::ng-deep .mat-badge-large .mat-badge-content{
+    font-size:15px;
+    padding:3px;
+  }
+  ::ng-deep .mat-badge-accent .mat-badge-content{
+    background-color: #fffb00;
+   color: #000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
